@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ford-search
+  main:
+    allow-bean-definition-overriding: true
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+
+  redis:
+    host: localhost
+    port: 6379
+    password:
+
+# 生成接口文档
+swagger:
+  enable: true
