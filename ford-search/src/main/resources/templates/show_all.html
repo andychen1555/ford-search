@@ -9,11 +9,16 @@
 <table border="1">
     <tr>
         <th>用户名</th>
-        <th>查询最频繁历史</th>
+        <th colspan="4">查询最频繁历史</th>
+        <th>查询次数</th>
     </tr>
     <tr th:each="record : ${resultList}">
         <td th:text="${record.user}"></td>
-        <td th:text="${record.result}"></td>
+        <td th:text="${record.gasName}"></td>
+        <td th:text="${record.gasAddress}"></td>
+        <td th:text="${record.ford4SName}"></td>
+        <td th:text="${record.ford4SAddress}"></td>
+        <td th:text="${record.numbers}"></td>
     </tr>
 </table>
 </body>

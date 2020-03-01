@@ -7,15 +7,25 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/test;AUTO_SERVER=TRUE
+    username: root
+    password:
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
     cache: false
-
-  redis:
-    host: localhost
-    port: 6379
-    password:
 
 # 生成接口文档
 swagger:
